@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+.column {
+	flex-direction: column;
+
+}
+
+.wrapper {
+	width: 1136px;
+	margin: 0 auto;
+	height: 450px;
+	display: flex;
+    padding: 5px 0; 
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 42px;
+	text-align: center;
+}
+
+#banner {
+	position: relative;
+	border-radius: 8px;
+	background-image: url('/images/img/main1/main01.jpg');
+	width: 873.73px;
+	background-size: cover;
+	height: 450px;
+}
+
+#banner>.box1 {
+	position: absolute;
+	display: flex;
+	left: 30px;
+	top: 300px;
+	width: 600px;
+	height: 160px;
+}
+
+#banner>.box1>p {
+	color: rgb(255, 255, 255);
+	font-size: 24px;
+	font-weight: 700;
+}
+
+#banner>.box1>.name {
+	position: absolute;
+	padding-top: 70px;
+	display: flex;
+}
+
+#banner>.box1>.name>.profile {
+	position: relative;
+	background-image: url('/images/main/main01.jpg');
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+}
+
+#banner>.box1>.name>.profileId {
+	position: relative;
+	font-size: 14px;
+	color: white;
+	height: 20px;
+}
+
+#slide {
+	position: relative;
+	background-image: url('/images/img/main1/slide_01.jfif');
+	width: 340px;
+	height: 450px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 8px;
+	margin: 0 5px;
+}
+
+#slide>.btn-wrap>.btn {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-repeat: no-repeat;
+}
+
+#slide>.btn-wrap>.prev-btn {
+	background-image: url('/images/img/main1/chevron-left-solid.svg');
+}
+
+#slide>.btn-wrap>.next-btn {
+	background-image: url('/images/img/main1/chevron-right-solid.svg');
+}

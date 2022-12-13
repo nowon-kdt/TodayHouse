@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원 가입</title>
+</head>
+<link rel="stylesheet" href="/css/log/signup.css" >
+<body>
+	<div class="wrap">
+		<section class="all-sec">
+			 <a href="/">
+				<img alt="" src="/images/img/header/THlogo.png">			 
+			 </a>
+				<div class="all-div">
+					 <h1>회원가입</h1>
+					 <div class="icon-menu">
+					 	 <p>SNS계정으로 간편하게 회원가입</p>
+					 	 <ul class="flex icon">
+					 	 	<li>
+					 	 	<a>
+					 	 	<img alt="" src="/img/facebook.PNG">
+					 	 	</a>
+					 	 	</li>
+					 	 	
+					 	 	<li>
+					 	 	<a>
+					 	 	<img alt="" src="/img/kakako.PNG">
+					 	 	</a>
+					 	 	</li>
+					 	 	
+					 	 	<li>
+					 	 	<a>
+					 	 	<img alt="" src="/img/naver.PNG">
+					 	 	</a>
+					 	 	</li>
+					 	 </ul>	
+						
+					 </div>
+					<form>
+					 <div class="signup">
+					 	<label class="email-label">이메일</label>
+					 		<div>
+					 	 		<div class="pass-menu">
+					 	 			<span class="email-first">
+					 	 			<label>
+					 	 			<input class="form-control" placeholder="이메일" size="1" value="">
+					 	 			<span class="form-control-blind">이메일 앞 주소 입력하기</span>
+									</label>
+					 	 			</span>
+					 	 		</div>
+					 	 		<!--클릭스 안보일떄  -->
+								<!-- <div class="email-last">필수 입력 항목입니다.</div> -->						 	 	
+					 	 	</div>
+					 	 	<div class="pass-menu">
+					 	 	<label class="pass-label">비밀번호</label>
+					 	 	<div class="pass-8">영문, 숫자를 포함한 8자 이상의 비밀번호를 입력해주세요.</div>
+					 	 	<label>
+					 	 	<input type="password" class="pass-input" value="" name="password" placeholder="비밀번호">
+					 	 <!-- 	<span class="">비밀번호 입력하기</span> -->
+					 	 	</label>
+					 	 	</div>
+					 	 	
+					 	 	<div class="pass-menu">
+					 	 	<label class="pass-label">비밀번호 확인</label>
+					 	 	<div class="pass-8">비밀번호를 한번더 입력해주세요</div>
+					 	 	<label>
+					 	 	<input type="password" class="pass-input" value="" name="password" placeholder="비밀번호">
+					 	 <!-- 	<span class="">비밀번호 입력하기</span> -->
+					 	 	</label>
+					 	 	</div>
+					 	 	
+					 	 	<!--/////////////////////////닉네임/////////////////////////////  -->
+					 	 	<!--귀찮아서 css 똑같아여  -->
+					 	 	<div class="pass-menu">
+					 	 	<label class="pass-label">닉네임</label>
+					 	 	<div class="pass-8">다른유저와 겹치지않게 닉네임을 입력해주세요</div>
+					 	 	<label>
+					 	 	<input type="text" class="pass-input" value="" name="" placeholder="별명(2~15자)">
+					 	 <!-- 	<span class="">비밀번호 입력하기</span> -->
+					 	 	</label>
+					 	 	</div>
+					 	 	
+					 	 	<!--/////////////////////////약관동의/////////////////////////////  -->
+					 	 	<div class="terms-div">
+					 	 	<label class="pass-label">약관동의</label>
+					 	 	<div class="terms-all">
+								<div class="flex term">
+									<input type="checkbox" id="terms-all2" >
+									<label for="terms-all2"><span><b>전제 약관 동의</b></span></label>
+								</div>
+								<hr>
+								<div class="flex term">
+									<input type="checkbox" id="join-y">
+									<label for="join-y"><span>[필수] 만 14세 이상입니다.</span></label>
+									<a class="term-a" href="#ex1" rel="modal:open">></a>
+								</div>
+								
+								<div class="flex term top">
+									<input type="checkbox" id="financial-y">
+									<label for="financial-y">
+										<span class="term-span" >
+											<span class="term-in-span">[필수] 전자금융거래약관</span>
+										</span>
+									</label>
+									
+									<a href="#">
+					   	              >
+									</a>
+								</div>
+								
+								<div>
+									<div class="flex term top">
+										<input type="checkbox" id="privacy-y">
+										<label for="privacy-y">
+										<span class="term-span" >
+										<span class="term-in-span">[필수] 개인정보 수집 및 이용동의</span>
+										</span>
+										</label>
+										<a href="#">></a>
+									</div>
+								</div>
+							
+								<div class="flex term top">
+									<input type="checkbox" id="sms-email-y">
+									
+									<label for="sms-email-y">
+										<span class="term-span" >
+									<span class="term-in-span">[선택] 혜택 정보 및 광고 수신동의(SMS, E-mail)</span>
+										</span>
+										
+									</label>
+								</div>
+						
+						</div>
+						</div>
+					 </div>
+					 <button class="signup-button" type="submit">회원가입하기</button>
+				</form>	
+				<p class="id-check">이미 아이디가 있으신가요?
+				<a href="/login" class="">로그인</a>
+				</p>
+						 
+			</div>
+				<!--////////////  -->
+				
+		</section>
+		
+	</div>
+	
+	
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+ th:replace="~{layout/customer-layout :: customerLayout(~{this::head},~{this::main})}">
+<head>
+<meta charset="UTF-8">
+<title>장바구니</title>
+<link rel="stylesheet" href="/css/bascket/bascket.css">
+
+
+</head>
+<body>
+	 <main>
+
+		<div class="wrap">
+			 <form>
+				<div class="bascket-goods">
+					<span>주문/배송(보내는 사람/받는 사람)</span>
+				</div>
+			<div class="flex">
+				<div class="ul-content">
+					<div class="bascket-goods">
+					<span>보내는 사람</span>
+					</div>
+					<ul class="ul-center">
+						<li class="li-first">
+							<div class="dust-class">
+								<label for="itemname"> <span>* </span>이름
+								</label>
+								 <input type="text" class="txt-input" id="itemname"
+									placeholder="이름을 입력해주세요. " value="">
+							</div>
+						</li>
+						<li>
+							<div class="dust-class">
+								<label for="itemname"> <span>* </span>이메일
+								</label>
+								 <input type="text" class="txt-input" id="itemname"
+									placeholder="이메일을 입력해주세요. " value="">
+							</div>
+						</li>
+						<li>
+							<div class="dust-class">
+								<label for="itemname"> <span>* </span>연락처
+								</label>
+								 <input type="text" class="txt-input" id="itemname"
+									placeholder="연락처를 입력해주세요. " value="">
+							</div>
+						</li>
+						
+					</ul>
+				</div>
+				<!--///////////////////////////////////////////////////////////////////////////  -->
+				<div class="ul-content">
+					<ul class="ul-center">
+						<li class="li-first">
+							<div class="dust-class">
+								<label for="itemname"> <span>* </span>배송지명
+								</label>
+								 <input type="text" class="txt-input" id="itemname"
+									placeholder="이름을 입력해주세요. " value="">
+							</div>
+						</li>
+						<li>
+							<div class="dust-class">
+								<label for="itemname"> <span>* </span>받는사람
+								</label>
+								 <input type="text" class="txt-input" id="itemname"
+									placeholder="이메일을 입력해주세요. " value="">
+							</div>
+						</li>
+						<li>
+							<div class="dust-class">
+								<label for="itemname"> <span>* </span>연락처
+								</label>
+								 <input type="text" class="txt-input" id="itemname"
+									placeholder="연락처를 입력해주세요. " value="">
+							</div>
+						</li>
+						<li>
+							<div class="dust-class">
+								<label for="itemname"> <span>* </span>주소
+								</label>
+								 <input type="text" class="txt-input" id="itemname"
+									placeholder="연락처를 입력해주세요. " value="">
+								<input type="text" class="txt-input" id="itemname"
+									placeholder="상세주소를 입력해주세요. " value="">
+							</div>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////  -->
+<!--/////////////////////////////////////////TABLE////////////////////////////////////////////////////////  -->
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////  -->
+			<div class="bascket-goods">
+				<span>장바구니에 담긴 상품</span>
+			</div>
+	
+			<table class="bascket-table">
+				<thead class="bascket-thead">
+					<tr>
+						<th style="width:56px;"><input type="checkbox"></th>
+						<th style="width:96px;">이미지</th>
+						<!--자동으로 가운데정령에 볼더까지  -->
+						<th style="width:436px;">제품명</th>
+						<th style="width:86px;">수량</th>
+						<th style="width:66px;">적립금</th>
+						<th style="width:66px;">가격</th>
+						<th style="width:86px;">배송비</th>
+						<th style="width:100px;">주문</th>
+					</tr>
+				</thead>
+				<tbody class="bascket-tbody">
+				 	 <tr style="height: 85px;">
+						<th style="border-bottom: 1px solid #a9a9a9;">
+						<input type="checkbox"></th>
+						<td><img src="" alt="이미지"></td>
+						<!-- 이미지사이즈 70 70   -->
+						<td>
+							<p>[ㅁㅇㄹㄴㅇ]ㅇㄴㄹㄴㅇㄹㄴㅇㄹㅇㄴㄹㄴㅇㄹㄴㄹㅇㄴㄹㅇㄴㄹㅇㄴ</p>
+						
+						</td>
+						<td>
+							<p>
+								<input type="number" class="text-spin">
+							</p>
+							<button type="button">수정</button>
+						</td>
+						<td>0</td>
+						<td><span>19500</span> <span>원</span></td>
+						<td>무료배송비</td>
+						<td >
+							<div class="block">  
+							<span>주문</span>
+							<div class="flex">
+								<button type ="button">삭제</button>
+								<button type ="button">취소</button>
+							</div>
+							</div>					
+						</td>
+					</tr>
+					
+					
+					 <tr style="height: 85px;">
+						<th><input type="checkbox"></th>
+						<td><img src="" alt="이미지"></td>
+						<!-- 이미지사이즈 70 70   -->
+						<td>
+							<p>[ㅁㅇㄹㄴㅇ]ㅇㄴㄹㄴㅇㄹㄴㅇㄹㅇㄴㄹㄴㅇㄹㄴㄹㅇㄴㄹㅇㄴㄹㅇㄴ</p>
+						
+						</td>
+						<td>
+							<p>
+								<input type="number" class="text-spin">
+							</p>
+							<button type="button">수정</button>
+						</td>
+						<td>0</td>
+						<td><span>19500</span> <span>원</span></td>
+						<td>무료배송비</td>
+						<td >
+							<div class="block">  
+							<span>주문</span>
+							<div class="flex">
+								<button type ="button">삭제</button>
+								<button type ="button">취소</button>
+							</div>
+							</div>					
+						</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="8">
+							<div class="flex between">
+								<div>
+									<img alt="이미지삽입" src="">
+									<!--  -->
+								</div>
+								총 구매금액 : 59,990원 = 총 59,990원 (적립금 0원)
+							</div>
+						</td>
+					</tr>
+				
+				</tfoot>
+
+			</table>
+			</form>
+		</div>
+	
+</main>
+	 
+	 
+</body>
+</html>
