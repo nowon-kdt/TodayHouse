@@ -31,6 +31,7 @@
 		    background-color: #333;
 		    color: #fff;
 		    padding: 10px;
+		    width: 100px;
 		}
  		 
  		 table td{
@@ -48,44 +49,79 @@
 	<main>
 		<h1>메인컨텐츠</h1>
 		<div class="wrap">
-			<p><a href="/admin">관리자홈</a> &gt; 주문관리</p>
-			<div id="adminOrder1">
-				<p>고객명</p>
-				<input type="text"/>
-				<p>주문일</p>
-				<input type="date">
-				<p>주문단계</p>
-				<select>
-					<option>결제완료
-					<option>예약취소
-					<option>배송완료
-					<option>무통장입금
-					<option>반품처리
-				</select>
-				<button>검색</button>
-			</div>
+			<p><a href="/admin">관리자홈</a> &gt; <a href="/admin/order">주문관리</a> &gt; 주문상세</p>
 			<table>
 				<thead>
 					<tr>
 						<th>주문번호</th>
-						<th>고객명</th>
-						<th>금액</th>
-						<th>주문일</th>
-						<th>주문단계</th>
-						<th>배송일</th>
-						<th>담당자</th>
+						<td>202212120005</td>
 					</tr>
 					<tr>
-						<td><a href="/admin/order/reg">202212120005</a></td>
+						<th>회원번호</th>
+						<td>34</td>
+					</tr>
+					<tr>
+						<th>고객명</th>
 						<td>홍길동</td>
-						<td>￦27,848,820</td>
+					</tr>
+					<tr>
+						<th>연락처</th>
+						<td>010-0000-0000</td>
+					</tr>
+					<tr>
+						<th>주문일</th>
 						<td>2022-12-12 14:03:01</td>
-						<td>결제완료</td>
-						<td>2022-12-12</td>
-						<td>담당자1</td>
+					</tr>
+					<tr>
+						<th>주문단계</th>
+						<td>
+							<select>
+								<option>결제완료
+								<option>예약취소
+								<option>배송완료
+								<option>무통장입금
+								<option>반품처리
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th rowspan="4">상품</th>
+						<td>상품1</td>
+					</tr>
+					<tr>
+						<td>상품2</td>
+					</tr>
+					<tr>
+						<td>상품3</td>
+					</tr>
+					<tr>
+						<td>상품4</td>
+					</tr>
+					<tr>
+						<th>합계</th>
+						<td>₩27,848,820</td>
+					</tr>
+					<tr>
+						<th>배송일</th>
+						<td><input type="date" /></td>
+					</tr>
+					<tr>
+						<th>담당자</th>
+						<td>
+							<select>
+								<option>담당자1
+								<option>담당자2
+								<option>담당자3
+								<option>담당자4
+							</select>
+						</td>
 					</tr>
 				</thead>
 			</table>
+			<div>
+				<button>수정</button>
+				<button>삭제</button>
+			</div>
 		</div>
 	</main>
 </body>

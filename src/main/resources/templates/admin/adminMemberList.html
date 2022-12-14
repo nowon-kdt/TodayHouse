@@ -31,7 +31,6 @@
 		    background-color: #333;
 		    color: #fff;
 		    padding: 10px;
-		    width: 100px;
 		}
  		 
  		 table td{
@@ -49,52 +48,30 @@
 	<main>
 		<h1>메인컨텐츠</h1>
 		<div class="wrap">
-			<p><a href="/admin">관리자홈</a> &gt; <a href="/admin/goodsList">상품관리</a> &gt; 상품상세</p>
+			<p><a href="/admin">관리자홈</a> &gt; 회원관리</p>
+			<div id="adminOrder1">
+				<p>이름</p>
+				<input type="text"/>
+				<p>전화번호</p>
+				<input type="text"/>
+				<button>검색</button>
+			</div>
 			<table>
-				<tr>
-					<th>상품번호</th>
-					<td><input type="text"></td>
-				</tr>
-				<tr>
-					<th>상품명</th>
-					<td><input type="text"></td>
-				</tr>
-				<tr>
-					<th>상품사진</th>
-					<td></td>
-				</tr>
-				<tr>
-					<th>카테고리</th>
-					<td>
-						<select>
-							<option>카테고리1
-							<option>카테고리2
-							<option>카테고리3
-							<option>카테고리4
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<th>재고</th>
-					<td><input type="text"></td>
-				</tr>
-				<tr>
-					<th>단가</th>
-					<td><input type="text"></td>
-				</tr>
-				<tr>
-					<th>등록일</th>
-					<td><input type="date"></td>
-				</tr>
-				<tr>
-					<th rowspan="4">상세내용</th>
-					<td><textarea></textarea></td>
-				</tr>
+				<thead>
+					<tr>
+						<th>회원번호</th>
+						<th>이름</th>
+						<th>연락처</th>
+						<th>이메일</th>
+					</tr>
+					<tr>
+						<td>34</a></td>
+						<td><a href="#">홍길동</td>
+						<td>010-0000-0000</td>
+						<td>test34@test.com</td>
+					</tr>
+				</thead>
 			</table>
-		</div>
-		<div>
-			<button>등록</button>
-			<button>취소</button>
 		</div>
 	</main>
 </body>

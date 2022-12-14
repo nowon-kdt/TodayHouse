@@ -18,25 +18,48 @@
 	    	console.log(fileData);
 	    	
 	    	var formData = new FormData()
-	    	FormData
+	    	formData.append('gimg', fileData);
 	    	
-	    	$.ajax({
+	    	$ajax({
 	    		url:"/admin/temp-upload",
 	    		type:"post",
-	    		contentType: false,
-	    		processDate: false,
-	    		data:{ gimg: fileData},
-	    		success:function(url){
-	    			$(el).siblings(".img").css("backgroung-image","url("+result+")");
+	    		contentType:false,
+	    		processData:false,
+	    		success:function(map){
+	    			console.log(map);
+	    			
+	    			$(el).siblings(".img").css("background-image", "url("+map.url+")");
+	    			$(el).siblings(".newName").val(map.fileName);
+	    			//대표이미지 와 추가이미지 구분
+	    			if($(el).prop("id")=="defimg")return;//대표이미지인경우 여기서 함수종료
+	    			
+	    			//추가이미지를 넣을수 있는 태그 삽입
+	    			if(idx < 3)addTag();
+	    			
 	    		}
-	    	})
+	    	});
 	    }
+	    
+	    function addTag(){
+	    	
+	    	var tag=`
+	  		<div class="addimg">
+				<label class="img" for="addimg_${idx}">+</label>
+				<input id="addimg_${idx}" class="gimg" type="file" name="gimg" onchange="gimgChanged(this)">
+				<input type="hidden" class="newName" name="newName">
+			</div>
+	    	`
+	    	//클래스이름이 addimg인 모든태그 선택자중 마지막태그 뒤에 삽입
+	    	$(".addimg").last().after(tag);
+	    	idx++;
+	    }
+	    
  	</script>
  	<style type="text/css">
 	 	.img{
 			width: 100px;
 			height: 100px;
-			background-color: rgba(0,255,255, 25%);
+			background-color: #e9e9e9;
 			border: 1ox dashed #e9e9e9;
 			text-align: center;
 			line-height: 100px;
@@ -78,6 +101,7 @@
 						<div>
 							<label class="img" for="defimg">+</label>
 							<input id="defimg" class="gimg" type="file" name="gimg" onchange="gimgChanged(this)" >
+							<input type="hidden" class="newName" name="newName">
 						</div>
 					 </td>
 				</tr>

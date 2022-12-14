@@ -31,6 +31,7 @@
 		    background-color: #333;
 		    color: #fff;
 		    padding: 10px;
+		    width: 100px;
 		}
  		 
  		 table td{
@@ -48,43 +49,47 @@
 	<main>
 		<h1>메인컨텐츠</h1>
 		<div class="wrap">
-			<p><a href="/admin">관리자홈</a> &gt; 상품관리</p>
-			<div id="adminOrder1">
-				<p>상품명</p>
-				<input type="text"/>
-				<p>카테고리</p>
-				<select>
-					<option>가구
-					<option>가전
-					<option>조명
-					<option>수납
-					<option>주방용품
-					<option>기타
-				</select>
-				<p>인기상품</p>
-				<input type="checkbox">
-				
-				<button>검색</button>
-			</div>
+			<p><a href="/admin">관리자홈</a> &gt; <a href="/admin/goodsList">상품관리</a> &gt; 상품상세</p>
 			<table>
 				<thead>
 					<tr>
 						<th>상품번호</th>
-						<th>상품명</th>
-						<th>카테고리</th>
-						<th>단가</th>
-						<th>재고</th>
-						<th>등록일</th>
-						<th>인기상품</th>
+						<td>S05511</td>
 					</tr>
 					<tr>
-						<td>S05511</td>
-						<td><a href="/admin/goodsList/reg">완전쩌는테이블</a></td>
-						<td>가구</td>
-						<td>￦15,000</td>
+						<th>상품명</th>
+						<td>상품명5511</td>
+					</tr>
+					<tr>
+						<th>상품사진</th>
+						<td></td>
+					</tr>
+					<tr>
+						<th>카테고리</th>
+						<td>
+							<select>
+								<option>카테고리1
+								<option>카테고리2
+								<option>카테고리3
+								<option>카테고리4
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th>재고</th>
 						<td>999</td>
+					</tr>
+					<tr>
+						<th>단가</th>
+						<td>₩15,000</td>
+					</tr>
+					<tr>
+						<th>등록일</th>
 						<td>2022-12-12 14:03:01</td>
-						<td><input type="checkbox"></td>
+					</tr>
+					<tr>
+						<th rowspan="4">상세내용</th>
+						<td></td>
 					</tr>
 				</thead>
 			</table>

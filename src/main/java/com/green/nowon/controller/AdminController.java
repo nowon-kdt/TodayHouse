@@ -21,6 +21,11 @@ public class AdminController {
 		return "admin/adminMain2";
 	}
 	
+	@GetMapping("/admin/main2/reg")
+	public String main2Reg() {
+		return "admin/adminMain2Reg";
+	}
+	
 	@GetMapping("/admin/main3")
 	public String main3() {
 		return "admin/adminMain3";
@@ -28,40 +33,65 @@ public class AdminController {
 	
 	@GetMapping("/admin/order")
 	public String order() {
-		return "admin/adminOrder";
+		return "admin/adminOrderList";
 	}
 	
 	@GetMapping("/admin/order/reg")
 	public String reg() {
-		return "admin/adminOrderReg";
+		return "admin/adminOrder";
 	}
 	
-	@GetMapping("/admin/goodsList")
+	@GetMapping("/admin/goods")
 	public String goodsList() {
+		return "admin/adminGoodsList";
+	}
+	
+	@GetMapping("/admin/goods/gno")
+	public String goodsDetail() {
 		return "admin/adminGoods";
 	}
 	
-	@GetMapping("/admin/goodsList/reg")
-	public String goodsListReg() {
+	@GetMapping("/admin/goods/reg")
+	public String goodsReg() {
 		return "admin/adminGoodsReg";
 	}
 	
 	@GetMapping("/admin/request")
+	public String requestList() {
+		return "admin/adminRequestList";
+	}
+	
+	@GetMapping("/admin/request/bno")
 	public String request() {
 		return "admin/adminRequest";
 	}
 	
 	@GetMapping("/admin/review")
+	public String reviewList() {
+		return "admin/adminReviewList";
+	}
+	
+	@GetMapping("/admin/review/bno")
 	public String review() {
 		return "admin/adminReview";
 	}
 	
 	@GetMapping("/admin/interior")
+	public String interiorList() {
+		return "admin/adminInteriorList";
+	}
+	
+	@GetMapping("/admin/interior/bno")
 	public String interior() {
 		return "admin/adminInterior";
 	}
 	
 	@GetMapping("/admin/member")
+	public String memberList() {
+		return "admin/adminMemberList";
+	}
+	
+	@GetMapping("/admin/member/mno")
 	public String member() {
 		return "admin/adminMember";
 	}
