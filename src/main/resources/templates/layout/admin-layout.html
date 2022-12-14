@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>관리자페이지</title>
+	<link rel="stylesheet" href="/css/commons/common.css">
+	<link rel="stylesheet" href="/css/commons/admin-layout.css">
+</head>
+<header>
+	<h1>좌측메뉴</h1>
+	<div class="wrap">
+		<ul>
+			<li>
+				<a href="/">SHOPPING MALL</a>
+			</li>
+			<li>
+				<a href="/admin">관리자HOME</a>
+			</li>
+			<li>
+				<dl>
+					<dt>메인화면</dt>
+					<dd>
+						<a href="/admin/main1">메인페이지설정(HOME)</a>
+					</dd>
+					<dd>
+						<a href="/admin/main2">메인슬라이드설정(HOME)</a>
+					</dd>
+					<dd>
+						<a href="/admin/main3">메인슬라이드설정(스토어)</a>
+					</dd>
+					<dt>주문관리</dt>
+					<dd>
+						<a href="/admin/order">주문관리</a>
+					</dd>
+					<dt>상품관리</dt>
+					<dd>
+						<a href="/admin/goodsList">상품관리</a>
+					</dd>
+					<dt>게시판관리</dt>
+					<dd>
+						<a href="/admin/request">문의게시판</a>
+					</dd>
+					<dd>
+						<a href="/admin/review">리뷰게시판</a>
+					</dd>
+					<dd>
+						<a href="/admin/interior">인테리어게시판</a>
+					</dd>
+					<dt>회원관리</dt>
+					<dd>
+						<a href="/admin/member">회원관리</a>
+					</dd>
+				</dl>
+			</li>
+		</ul>
+	</div>
+</header>
+</html>
