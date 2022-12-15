@@ -41,21 +41,6 @@ public class AdminController {
 		return "admin/adminOrder";
 	}
 	
-	@GetMapping("/admin/goods")
-	public String goodsList() {
-		return "admin/adminGoodsList";
-	}
-	
-	@GetMapping("/admin/goods/gno")
-	public String goodsDetail() {
-		return "admin/adminGoods";
-	}
-	
-	@GetMapping("/admin/goods/reg")
-	public String goodsReg() {
-		return "admin/adminGoodsReg";
-	}
-	
 	@GetMapping("/admin/request")
 	public String requestList() {
 		return "admin/adminRequestList";

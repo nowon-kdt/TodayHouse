@@ -47,7 +47,10 @@
 	<th:block th:insert="~{layout/admin-layout :: header}"/>
 	<main>
 		<h1>메인컨텐츠</h1>
-		<div class="wrap">
+<!-- 		<div th:if="${items.size() == 0}">
+			<p>상품이 없습니다.</p>
+		</div> -->
+		<div th:each="item:${items}" class="wrap">
 			<p><a href="/admin">관리자홈</a> &gt; 상품관리</p>
 			<div id="adminOrder1">
 				<p>상품명</p>
@@ -75,18 +78,18 @@
 						<th>단가</th>
 						<th>재고</th>
 						<th>등록일</th>
-						<th>인기상품</th>
-					</tr>
-					<tr>
-						<td>S05511</td>
-						<td><a href="/admin/goods/gno">완전쩌는테이블</a></td>
-						<td>가구</td>
-						<td>￦15,000</td>
-						<td>999</td>
-						<td>2022-12-12 14:03:01</td>
-						<td><input type="checkbox"></td>
 					</tr>
 				</thead>
+				<tbody>
+					<tr th:each="item:${items}">
+						<td th:text="${item.ino}">S05511</td>
+						<td th:text="${item.title}"><a href="/admin/goods/gno">완전쩌는테이블</a></td>
+						<td th:text="${item.category}">가구</td>
+						<td th:text="${item.price}">￦15,000</td>
+						<td th:text="${item.stock}">999</td>
+						<td th:text="${item.createdDate}">2022-12-12 14:03:01</td>
+					</tr>
+				</tbody>
 			</table>
 			<div>
 				<a href="/admin/goods/reg"><button>등록</button></a>
