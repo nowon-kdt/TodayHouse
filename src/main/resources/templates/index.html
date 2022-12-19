@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+ th:replace="~{layout/customer-layout :: customerLayout(~{this::head},~{this::main})}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/body/main1.css">
+<link rel="stylesheet" href="/css/body/main2.css">
+<link rel="stylesheet" href="/css/commons/reset.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}   
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+</script>
+
+
+</head>
+<body>
+   <h1>메인페이지</h1>
+<!--//////////////////////////////////////////////////////////////////////////////  -->
+<!--///////////////////////////Main1//////////////////////////////////////////////  -->
+<!--//////////////////////////////////////////////////////////////////////////////  -->
+      
+   <main>
+      <div class="wrapper flex between">
+      <div id="banner" class="column">
+         <div class="box-image"></div>
+         <div class="box1">
+            <p>30살 구축▶우드 하우스</p>
+            <div class="name">
+               <div class="profile"></div>
+               <div class="profileId">아이디1</div>
+            </div>
+         </div>
+      </div>
+      <div class="slideshow-container flex">
+      
+         <div class="mySlides target">
+           <div class="numbertext">1 / 13+</div>
+           <img src="/images/img/main1/slide_01.jfif" style="width:100%">
+           <div class="text"></div>
+         </div>
+         
+         <div class="mySlides">
+           <div class="numbertext">2 / 13+</div>
+           <img src="/images/img/main1/slide_02.png" style="width:100%">
+           <div class="text"></div>
+         </div>
+         
+         <div class="mySlides">
+           <div class="numbertext">3 / 13+</div>
+           <img src="/images/img/main1/slide_03.webp" style="width:100%">
+           <div class="text"></div>
+         </div>
+         <div class="mySlides">
+           <div class="numbertext">4 / 13+</div>
+           <img src="/images/img/main1/slide_04.webp" style="width:100%">
+           <div class="text"></div>
+         </div>
+         <div class="mySlides">
+           <div class="numbertext">5 / 13+</div>
+           <img src="/images/img/main1/slide_05.webp" style="width:100%">
+           <div class="text"></div>
+         </div>
+         <div class="mySlides">
+           <div class="numbertext">6 / 13+</div>
+           <img src="/images/img/main1/slide_06.webp" style="width:100%">
+           <div class="text"></div>
+         </div>
+         <div class="mySlides">
+           <div class="numbertext">7 / 13+</div>
+           <img src="/images/img/main1/slide_07.png" style="width:100%">
+           <div class="text"></div>
+         </div>
+         <div class="mySlides">
+           <div class="numbertext">8 / 13+</div>
+           <img src="/images/img/main1/slide_08.webp" style="width:100%">
+           <div class="text"></div>
+         </div>
+         <div class="mySlides">
+           <div class="numbertext">9 / 13+</div>
+           <img src="/images/img/main1/slide_09.webp" style="width:100%">
+           <div class="text"></div>
+         </div>
+         <div class="mySlides">
+           <div class="numbertext">10 / 13+</div>
+           <img src="/images/img/main1/slide_10.webp" style="width:100%">
+           <div class="text"></div>
+         </div>
+         <div class="mySlides">
+           <div class="numbertext">11 / 13+</div>
+           <img src="/images/img/main1/slide_11.webp" style="width:100%">
+           <div class="text"></div>
+         </div>
+         <div class="mySlides">
+           <div class="numbertext">12 / 13+</div>
+           <img src="/images/img/main1/slide_12.jfif" style="width:100%">
+           <div class="text"></div>
+         </div>
+         <div class="mySlides">
+           <div class="numbertext">13 / 13+</div>
+           <img src="/images/img/main1/slide_13.webp" style="width:100%">
+           <div class="text"></div>
+         </div>
+         
+         <a class="btn prev-btn" onclick="plusSlides(-1)"></a>
+         <a class="btn next-btn" onclick="plusSlides(1)"></a>
+         
+         </div>         
+      </div>
+
+<!--//////////////////////////////////////////////////////////////////////////////  -->
+<!--///////////////////////////Main2////////////////////////////////////  -->
+<!--//////////////////////////////////////////////////////////////////////////////  -->
+   
+      <div class="wrap">
+      <div class="flex between title-wrap">
+         <h2 class="s-title">인테리어 리뷰 😊</h2>
+         <p class="more"><a href="/main2-more">더보기</a></p>
+      </div>
+      <ul class="s-title-wrap">
+         <li>
+            <a href="/main2-detail">
+               <img alt="" src="/images/img/main2/img1.webp">
+            </a>
+            <p><span>따뜻한 이야기 꽃을 피우는</span> 30살 구축▶</p>
+            <p>우드하우스</p>
+         </li>
+         <li>
+            <a href="#">
+               <img alt="" src="/images/img/main2/img2.webp">
+            </a>
+            <p><span>🌿초록빛 정원을</span>둥그렇게 감싸 안은 주택</p>
+            <p>우드하우스</p>
+         </li>
+         <li>
+            <a href="#">
+               <img alt="" src="/images/img/main2/img3.webp">
+            </a>
+            <p><span>30평대 아파트</span> 호텔 부럽지 않게 전체</p>
+            <p>시공🛠</p>
+         </li>
+         <li>
+            <a href="#">
+               <img alt="" src="/images/img/main2/img4.webp">
+            </a>
+            <p><span>고급 자재로 마감한</span> 호텔식 하우스</p>
+            <p>인테리어</p>
+         </li>
+      </ul>
+         
+      </div>
+      <div class="wrap">
+      <div class="flex between title-wrap">
+         <h2 class="s-title">아직 버리지마세요!🙋‍♀️ 꿀추천 나가요!</h2>
+         <p class="more"><a href="/list2">더보기</a></p>
+      </div>
+      <ul class="s-title-wrap">
+         <li>
+            <a href="#">
+               <img alt="" src="/images/img/main2/img5.webp">
+            </a>
+            <p><span>요거트족을 위한</span> 신박하고 귀여운</p>
+            <p>아이디어😉</p>
+         </li>
+         <li>
+            <a href="#">
+               <img alt="" src="//images/img/main2/img6.webp">
+            </a>
+            <p><span>가성비 최고봉은 압축봉 💡</span>활용법</p>
+            <p>모았어요</p>
+         </li>
+         <li>
+            <a href="#">
+               <img alt="" src="/images/img/main2/img7.webp">
+            </a>
+            <p><span>아이부터 엄빠까지 👟</span> 온 가족 신발 수납</p>
+            <p>꿀팁 5</p>
+         </li>
+         <li>
+            <a href="#">
+               <img alt="" src="/images/img/main2/img8.webp">
+            </a>
+            <p><span>써보니 더 좋았던</span> 스테인리스 용품 5가지</p>
+         </li>
+      </ul>
+         
+      </div>
+      <div class="wrap">
+      <div class="flex between title-wrap">
+         <h2 class="s-title">청소 수납 노하우 😋</h2>
+         <p class="more"><a href="/list3">더보기</a></p>
+      </div>
+      <ul class="s-title-wrap">
+         <li>
+            <a href="#">
+               <img alt="" src="/images/img/main2/img9.webp">
+            </a>
+            <p><span>궁극의 라면 레시피</span> 5가지만 엄선했다!🍜</p>
+         </li>
+         <li>
+            <a href="#">
+               <img alt="" src="/images/img/main2/img10.webp">
+            </a>
+            <p><span>간단하지만 귀엽게!</span>하트 소시지 달걀덮밥</p>
+         </li>
+         <li>
+            <a href="#">
+               <img alt="" src="/images/img/main2/img11.gif">
+            </a>
+            <p><span>국민요리 둘의 만남</span> 김치볶음+삼각김밥</p>
+         </li>
+         <li>
+            <a href="#">
+               <img alt="" src="/images/img/main2/img12.webp">
+            </a>
+            <p><span>스팸을 돼지껍데기처럼?!</span> 색다른 스팸덮밥</p>
+         </li>
+      </ul>
+      </div>
+   </main>
+
+</body>
+</html>

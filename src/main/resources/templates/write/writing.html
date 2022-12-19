@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>글쓰기 페이지</title>
+<link rel="stylesheet" href="/css/write/writing.css">
+</head>
+<body>
+	<form>
+	<header>
+	
+		<div class="wrap">
+			<div class="header-top-border">
+				<div class="header-top flex between">
+					<a class="ddd">
+						<img alt="" src="/img/THlogo.png">
+					</a>
+					<button type="button">발행하기</button>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="wrap">
+			<ul>
+			  	<li class="flex">
+					<a>카테고리</a>	
+				<select name='category' class=form-cg>
+			  		<option value="acceptance">수납</option>
+			  		<option value="decorating tips">꾸미기팁</option>
+			  		<option value="cleaning">청소</option>
+			  		<option value="life information">생활정보</option>
+			  		<option value="howisthis">이거어때</option>
+			  	</select>		  	
+			  	</li>
+				<li>
+					<label for="wimg">+사진</label>
+					<input id="wimg" type="file">
+				</li>			
+			</ul>
+			<div class="title-box">
+				<input type="text" placeholder="제목을 입력하세요">
+			</div>
+		</div>
+		
+	</main>
+	</form>
+</body>
+</html>

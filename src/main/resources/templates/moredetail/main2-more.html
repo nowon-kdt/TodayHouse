@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+ th:replace="~{layout/customer-layout :: customerLayout(~{this::head},~{this::main})}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/body/main2-more.css">
+<link rel="stylesheet" href="/css/commons/reset.css">
+<link rel="stylesheet" href="/css/commons/common.css">
+</head>
+<body>
+<main>
+		<div class="wrap">
+			<div class="flex between title-wrap">
+				<h2 class="s-title">인테리어 리뷰 😊</h2>
+			</div>
+			<ul class="s-title-wrap flex between flex-wrap">
+				<li>
+					<a href="#">
+						<span class="more-img">
+							<img alt="" src="/images/img/img1.webp">
+						</span>
+					</a>
+					<p class="more-titel">따뜻한 이야기 꽃을 피우는 우드하우스</p>
+					<p class="more-user-id">유저id</p>
+					<p class="more-count">조회 0</p>
+				</li>
+				<li>
+					<a href="#">
+						<span class="more-img">
+							<img alt="" src="/images/img/img2.webp">
+						</span>
+					</a>
+					<p class="more-titel"><span>🌿초록빛 정원을</span>둥그렇게 감싸 안은 주택</p>
+					<p class="more-user-id">유저id</p>
+					<p class="more-count">조회수 0</p>
+				</li>
+				<li>
+					<a href="#">
+						<span class="more-img">
+							<img alt="" src="/images/img/img3.webp">
+						</span>
+					</a>
+					<p class="more-titel"><span>30평대 아파트</span> 호텔 부럽지 않게 전체 시공🛠</p>
+					<p class="more-user-id">유저id</p>
+					<p class="more-count">조회수 0</p>
+				</li>
+				<li>
+					<a href="#">
+						<span class="more-img">
+							<img alt="" src="/images/img/img4.webp">
+						</span>
+					</a>
+					<p class="more-titel"><span>고급 자재로 마감한</span> 호텔식 하우스 인테리어</p>
+					<p class="more-user-id">유저id</p>
+					<p class="more-count">조회수 0</p>
+				</li>
+			</ul>
+		</div>
+	</main>
+</body>
+</html>

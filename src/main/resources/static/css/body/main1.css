@@ -1,0 +1,178 @@
+@charset "UTF-8";
+.wrapper{
+			height: 450px;
+			display: flex;
+			padding: 50px 0;
+		    font-weight: 700;
+		    font-size: 36px;
+		    line-height: 42px;
+		    text-align: center;
+		    width:1136px;
+		    margin:0 auto;
+		}
+		
+		#banner{
+			width: 847px;
+			height: 430px;
+			margin: 0 10px 0 0 ;
+			overflow: hidden;
+			border-radius: 8px;
+			position: relative;
+		}
+		
+		#banner>.box-image{
+			background-image: url('/images/img/main1/main01.jpg');
+			width: 847px;
+			height: 430px;
+			transition: all 0.2s linear;
+		}
+		
+		#banner>.box-image:hover{
+			transform: scale(1.05);
+		}
+				
+		#banner>.box1{
+			position: absolute;
+			display: flex;
+			left: 30px;
+			top: 300px;
+			width: 600px;
+			height: 160px;
+		}
+		#banner>.box1>p{
+			color: rgb(255, 255, 255);
+			font-size: 24px;
+			font-weight: 700;
+		}
+		
+		#banner>.box1>.name{
+			position: absolute;
+			padding-top: 70px;
+			display: flex;
+		}
+		
+		#banner>.box1>.name>.profile{
+			position: relative;
+			background-image: url('/images/main/main01.jpg');
+			width: 20px;
+			height: 20px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			border-radius: 50%;
+		}
+		#banner>.box1>.name>.profileId{
+			position: relative;
+			font-size: 14px;
+			color: white;
+			height: 20px;
+			line-height: 20px;
+		}
+
+
+		/*여기서부터 슬라이드*/
+			
+		.slideshow-container {
+		  
+		  position: relative;
+		  border-radius: 8px;
+		}	
+		.mySlides {
+			display: none;
+			overflow: hidden;
+			border-radius: 8px;
+			width: 269px;
+			height: 430px;
+		}
+		.slideshow-container>.target{
+		display:block;}
+		.mySlides img {
+			vertical-align: middle;
+			border-radius: 8px;
+			width:100%;
+			height:100%;
+			transition: all 0.2s linear;
+		}
+		.mySlides img:hover{
+			transform: scale(1.05);
+		}
+		/* Slideshow container */
+		
+		
+		/* Next & previous buttons */
+		
+		.btn {
+			border:1px solid rgba(0,0,0,0.2);
+			
+			cursor: pointer;
+		 	position: absolute;
+			top: 50%;
+		 	padding: 10px;
+		 	margin-top: 15px;
+			border-radius: 50%;
+			background-color: white;
+			width: 30px;
+			height: 30px;
+			display:inline-block;
+			line-height: 30px;
+			text-align:center;
+			color: rgba(0, 0, 0, 0.8);
+		}
+		
+		/* Position the "next button" to the right */
+		.prev-btn {
+			left: -15px;
+		}
+		.prev-btn::after{
+			content: "<";
+			position: absolute;
+			left:50%;
+			top:50%;
+			font-size:30px;
+			width: 30px;
+			height: 30px;
+			margin-left:-15px;
+			margin-top:-16px;
+			
+		}
+		.next-btn {
+		  right: -15px;		  
+		}
+		.next-btn::after{
+		content: ">";
+			position: absolute;
+			right:50%;
+			top:50%;
+			font-size:30px;
+			width: 30px;
+			height: 30px;
+			margin-right:-15px;
+			margin-top:-16px;
+		}
+		/* Number text (1/3 etc) */
+		.numbertext {
+			font-size: 14px;
+		    height: 26px;
+		    border-radius: 13px;
+		    background-color: rgba(33, 38, 41, 0.5);
+		    font-weight: 700;
+		    display: inline-flex;
+		    align-items: center;
+		    color: #FFFFFF;
+		    box-sizing: border-box;
+		    padding: 4px 8px 4px 10px;
+		    cursor: pointer;
+		    position: absolute;
+		    right: 50%;
+		    bottom: -50px;
+		    margin-right:-40px;
+		    z-index:10;
+		}
+		
+		.active, .dot:hover {
+		  background-color: #717171;
+		}
+		
+		/* On smaller screens, decrease text size */
+		@media only screen and (max-width: 300px) {
+		  .prev, .next,.text {font-size: 11px}
+		}

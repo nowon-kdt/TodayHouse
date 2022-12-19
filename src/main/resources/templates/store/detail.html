@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+ th:replace="~{layout/customer-layout :: customerLayout(~{this::head},~{this::main})}">
+<head>
+<meta charset="UTF-8">
+<title>스토어</title>
+<link rel="stylesheet" href="/css/store/detail.css">
+<link rel="stylesheet" href="/css/commons/reset.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+	<main>
+		<form>
+			<div class="wrap flex">
+				<div class="detail-img-wrap flex">
+					<ul>
+						<li>
+							<img class="detail-img" alt="" src="/images/img/store/detail/detailimg.webp">
+						</li>
+						<li>
+							<img class="detail-img" alt="" src="/images/img/store/detail/detailimg2.webp">
+						</li>
+						<li>
+							<img class="detail-img" alt="" src="/images/img/store/detail/detailimg3.webp">
+						</li>
+						<li>
+							<img class="detail-img" alt="" src="/images/img/store/detail/detailimg4.webp">
+						</li>
+					</ul>
+					<div class="detail-main-img">
+						<img alt="" src="/images/img/store/detail/detailimg.webp">
+					</div>
+				</div>
+				<div class="detail">
+					<h2>웰퍼니쳐</h2>
+					<p class="detail-name">신소재 패브릭 소파모음 (아쿠아텍스/부클레)</p>
+					
+					<p class="detail-price">194,000원</p>
+					<p class="deli">배송 상품 정보 참고</p>
+					<div class="select">
+						<select>
+							<option>구성을 선택하세요.</option>
+						</select>
+						<select>
+							<option>색상을 선택하세요.</option>
+						</select>
+					</div>
+					<div class="detail-price-sum flex between">
+						<p>주문금액</p>
+						<p><span>0원</span></p>
+					</div>
+					<div class="button-wrap flex between">
+						<button class="detail-cart">장바구니</button>
+						<button class="detail-buy">바로구매</button>
+					</div>
+				</div>
+			</div>
+		</form>
+		<div class="review-wrap">
+			<div class="review-haeder-wrap">
+				<div class="review-haeder">
+					<p>리뷰</p>
+				</div>
+			</div>
+			<div class="review">
+				<p class="user-nick">유저닉네임</p>
+				<div class="product-name-wrap">
+					<p class="product-name">신소재 패브릭 소파모음 (아쿠아텍스/부클레)</p>
+					<p class="product-detail">구성: 몽쉘 2인 / 색상: 핑크믹스</p>
+				</div>
+				<div class="product-img">
+					<img alt="" src="/images/img/store/detail/detailimg.webp">
+				</div>
+				<p class="review-content">화면에서 봤던것보다 더 예쁘고 맘에 들었어요.기존 쇼파 치우고 다 요아이로 바꾸고 싶을만큼 퀄리티가 좋았습니다.화면상으로 다 빛을 못보는 쇼파예요.진짜 별10개입니다.</p>
+			</div>
+			<div class="review">
+				<p class="user-nick">유저닉네임</p>
+				<div class="product-name-wrap">
+					<p class="product-name">신소재 패브릭 소파모음 (아쿠아텍스/부클레)</p>
+					<p class="product-detail">구성: 몽쉘 2인 / 색상: 핑크믹스</p>
+				</div>
+				<div class="product-img">
+					<img alt="" src="/images/img/store/detail/detailimg.webp">
+				</div>
+				<p class="review-content">화면에서 봤던것보다 더 예쁘고 맘에 들었어요.기존 쇼파 치우고 다 요아이로 바꾸고 싶을만큼 퀄리티가 좋았습니다.화면상으로 다 빛을 못보는 쇼파예요.진짜 별10개입니다.</p>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
