@@ -33,7 +33,7 @@
 	  	formData.append('gimg' ,fileData);
    	
 	   $.ajax({
-				url: "/amdin/temp-upload",
+				url: "/admin/temp-upload",
 				data: formData,
 				type: "post",
 				contentType: false,
@@ -168,11 +168,8 @@ button {
 									<input type="hidden" class="newName" name="newName"> 
 									<input type="hidden" class="orgName" name="orgName">
 							</div>
-
 						</td>
 					</tr>
-				
-				
 					<tr>
 						<th>추가이미지</th>
 						<td class="flex">
@@ -191,7 +188,16 @@ button {
 					</tr>					
 					<tr>
 						<th>카테고리</th>
-						<td><input type="text" name="category"></td>
+						<td>
+							<select name="category">
+								<option>가구</option>
+								<option>가전/디지털</option>
+								<option>주방용품</option>
+								<option>식품</option>
+								<option>데코/식물</option>
+								<option>조명</option>
+							</select>
+						</td>
 					</tr>
 					<tr>
 						<th>재고</th>

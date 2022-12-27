@@ -14,12 +14,11 @@ public interface ItemService {
 
 	void saveItem(ItemInsertDTO itemDto);
 
-
-
 	Map<String, String> fileTempUpload(MultipartFile gimg);
 
-
-
 	void adminGoodsListShow(Model model);
+
+	void adminGoodsDetail(long ino, Model model);
+
 
 }

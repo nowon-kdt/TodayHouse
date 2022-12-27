@@ -7,5 +7,7 @@ import com.green.nowon.entity.ItemEntity;
 
 @Repository
 public interface ItemEntityRepository extends JpaRepository<ItemEntity, Long>{
-
+	
+	
+	
 }

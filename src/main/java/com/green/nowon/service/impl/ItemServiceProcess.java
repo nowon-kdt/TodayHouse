@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.green.nowon.dto.AdminGoodsDetailDTO;
 import com.green.nowon.dto.AdminGoodsListDTO;
 import com.green.nowon.dto.ItemInsertDTO;
 import com.green.nowon.entity.ItemEntity;
@@ -37,7 +38,6 @@ public class ItemServiceProcess implements ItemService {
 	
 	@Override
 	public void saveItem(ItemInsertDTO itemDto) {
-		// TODO Auto-generated method stub
 	  ItemEntity entity = itemRepo.save(itemDto.toItemEntity());
 
 	 itemDto.toItemListImgs(entity, locationUpload).forEach(itemListImgRepository::save);	
@@ -49,19 +49,22 @@ public class ItemServiceProcess implements ItemService {
 		return FileUtils.fileUpload(gimg, locationTemp);
 	}
 
-
-
-
-
 	@Transactional
 	@Override
 	public void adminGoodsListShow(Model model) {
 		
 		model.addAttribute("items", itemRepo.findAll().stream().map(AdminGoodsListDTO::new)
 				.collect(Collectors.toList()));
-
-	
 	
 	}
 
+	@Transactional
+	@Override
+	public void adminGoodsDetail(long ino, Model model) {
+		model.addAttribute("detail", itemRepo.findById(ino)
+				.map(AdminGoodsDetailDTO::new)
+				.orElseThrow());
+	}
+
+	
 }

@@ -84,7 +84,7 @@
 				<tbody>
 					<tr th:each="item:${items}">
 						<td th:text="${item.ino}">S05511</td>
-						<td th:text="${item.title}"><a href="/admin/goods/gno">완전쩌는테이블</a></td>
+						<td><a th:href="|/admin/goods/${item.ino}|">[[${item.title}]]</a></td>
 						<td><img height="100px" th:src="${item.defImgUrl}"></td>
 						<td th:text="${item.category}">가구</td>
 						<td th:text="${item.price}">￦15,000</td>

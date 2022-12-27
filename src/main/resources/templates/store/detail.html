@@ -15,22 +15,12 @@
 			<div class="wrap flex">
 				<div class="detail-img-wrap flex">
 					<ul>
-						<li>
-							<img class="detail-img" alt="" src="/images/img/store/detail/detailimg.webp">
-						</li>
-						<li>
-							<img class="detail-img" alt="" src="/images/img/store/detail/detailimg2.webp">
-						</li>
-						<li>
-							<img class="detail-img" alt="" src="/images/img/store/detail/detailimg3.webp">
-						</li>
-						<li>
-							<img class="detail-img" alt="" src="/images/img/store/detail/detailimg4.webp">
-						</li>
+						<th:block th:each="idto:${detail.imgs}">
+							<li class="detail-img" th:style="|background-image: url('${idto.imgUrl}');|"> </li>
+						</th:block>
 					</ul>
-					<div class="detail-main-img">
-						<img alt="" src="/images/img/store/detail/detailimg.webp">
-					</div>
+					<div class="detail-main-img" th:style="|background-image: url('${detail.defImgUrl}');|"></div>
+
 				</div>
 				<div class="detail">
 					<h2>웰퍼니쳐</h2>

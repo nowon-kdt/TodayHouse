@@ -14,20 +14,20 @@
 		<div class="wrap ">
 			<h2>카테고리1</h2>
 			<ul class="product-wrap flex between">
-				<li>
-					<a href="/detail">
+				<li th:each="item:${items}">
+					<a th:href="|/detail/goods/${item.ino}|">
 						<span class="store-img">
-							<img alt="" src="/images/img/store/store1.webp">
+							<img height="100px" th:src="${item.defImgUrl}">
 						</span>
 						<div class="product">
-							<h3>웰퍼니쳐</h3>
-							<h4>신소재 패브릭 소파모음 (아쿠아텍스/부클레)</h4>
-							<h5>194,000 원</h5>
+							<h3 th:text="${item.category}">웰퍼니쳐</h3>
+							<h4>[[${item.title}]]</h4>
+							<h5 th:text="${item.price}">194,000 원</h5>
 							<h6><span>리뷰 221</span></h6>
 						</div>
 					</a>
 				</li>
-				<li>
+				<li >
 					<a href="#">
 						<span class="store-img">
 							<img alt="" src="/images/img/store/store1.webp">

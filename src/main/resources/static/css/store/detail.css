@@ -2,7 +2,9 @@
 
 .detail-img{
 	width:100%;
-	height: 100%;
+	height: 56px;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 main>form>.wrap{
 	padding-top:100px;
@@ -44,6 +46,7 @@ main>form>.wrap .detail-main-img{
 	height: 558px;
 	border-radius: 15px;
 	overflow: hidden;
+	background-size: cover;
 }
 main>form>.wrap .detail-main-img img{
 	width:100%;

@@ -42,6 +42,17 @@
  		 	margin-top: 10px;
  		 	margin-bottom: 10px;
  		 }
+ 		 
+ 		 table tr td .defImg{
+			width: 100px;
+ 		 }
+ 		 table tr td .addImg{
+ 		 	width: 100px;
+ 		 	height: 100px;
+ 		 	background-repeat: no-repeat;
+ 		 	background-position: center;
+ 		 	background-size: cover;
+ 		 }
  	</style>
 </head>
 <body>
@@ -50,48 +61,47 @@
 		<h1>메인컨텐츠</h1>
 		<div class="wrap">
 			<p><a href="/admin">관리자홈</a> &gt; <a href="/admin/goodsList">상품관리</a> &gt; 상품상세</p>
-			<table>
-				<thead>
-					<tr>
-						<th>상품번호</th>
-						<td>S05511</td>
-					</tr>
-					<tr>
-						<th>상품명</th>
-						<td>상품명5511</td>
-					</tr>
-					<tr>
-						<th>상품사진</th>
-						<td></td>
-					</tr>
-					<tr>
-						<th>카테고리</th>
-						<td>
-							<select>
-								<option>카테고리1
-								<option>카테고리2
-								<option>카테고리3
-								<option>카테고리4
-							</select>
-						</td>
-					</tr>
-					<tr>
-						<th>재고</th>
-						<td>999</td>
-					</tr>
-					<tr>
-						<th>단가</th>
-						<td>₩15,000</td>
-					</tr>
-					<tr>
-						<th>등록일</th>
-						<td>2022-12-12 14:03:01</td>
-					</tr>
-					<tr>
-						<th rowspan="4">상세내용</th>
-						<td></td>
-					</tr>
-				</thead>
+			<table th:each="detail:${detail}">
+				<tr>
+					<th>상품번호</th>
+					<td>[[${detail.ino}]]</td>
+				</tr>
+				<tr>
+					<th>상품명</th>
+					<td><input type="text" th:value="${detail.title}"></td>
+				</tr>
+				<tr>
+					<th>대표사진</th>
+					<td><img class="defImg" th:src="${detail.defImgUrl}"></td>
+				</tr>
+				<tr>
+					<th>상세사진</th>
+					<td class="flex">
+						<th:block th:each="idto:${detail.imgs}">
+							<div class="addImg bg-img" th:style="|background-image: url('${idto.imgUrl}');|"> </div>
+						</th:block>
+					</td>
+				</tr>
+				<tr>
+					<th>카테고리</th>
+					<td><input type="text" th:value="${detail.category}"></td>
+				</tr>
+				<tr>
+					<th>재고</th>
+					<td><input type="text" th:value="${detail.stock}"></td>
+				</tr>
+				<tr>
+					<th>단가</th>
+					<td><input type="text" th:value="${detail.price}"></td>
+				</tr>
+				<tr>
+					<th>등록일</th>
+					<td>[[${detail.createdDate}]]</td>
+				</tr>
+				<tr>
+					<th rowspan="4">상세내용</th>
+					<td><textarea th:text="${detail.detail}"></textarea></td>
+				</tr>
 			</table>
 		</div>
 	</main>
